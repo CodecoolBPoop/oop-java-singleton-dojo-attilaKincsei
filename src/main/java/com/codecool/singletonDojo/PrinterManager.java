@@ -11,11 +11,14 @@ public class PrinterManager {
     //
     // Write some code that tests all functionality!
 
-    public static void main(String[] args) {
-        for (int i = 0; i < 15; i++) {
-            Printer printer = Printer.getInstance();
-            printer.print("Something to print.");
-        }
+    public static void main(String[] args) throws InterruptedException {
+//        for (int i = 0; i < 5; i++) {
+//            Printer printer = Printer.getInstance();
+//            printer.print("Current time: ");
+//        }
+
+        Printer printer = Printer.getAvailableInstance();
+        printer.print("Could you print this for me, please?");
     }
 
 }
